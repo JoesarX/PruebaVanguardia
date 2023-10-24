@@ -10,7 +10,7 @@ app.get('/josue/', (req, res) => {
 })
 
 app.get('/vanguardia/', (req, res) => {
-  res.send('Estamos en clase de Tecnologias de Vanguardia')
+  res.send('Estamos en clase de Tecnologias de Vanguardia despues de agregar gitignore')
 })
 
 app.listen(3000)
