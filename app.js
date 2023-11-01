@@ -18,31 +18,6 @@ mongoose.connect(process.env.MOONGOSEKEY, {
 });
 
 
-// app.post('/insertarMongo/', async (req, res) => {
-//   try {
-//     await client.connect();
-//     const db = client.db(dbName);
-
-//     const document = {
-//       nombre: req.body.nombre,
-//       edad: req.body.edad,
-//       curso: req.body.curso,
-//       // nombre: 'Juanito Pruebas',
-//       // edad: 21,
-//       // curso: 'VanGuardia',
-//     };
-
-//     const result = await db.collection('test').insertOne(document);
-
-//     res.status(201).json({ message: 'Documento insertado', insertedId: result.insertedId });
-//   } catch (err) {
-//     console.error('Error:', err);
-//     res.status(500).json({ error: 'Ocurrió un error' });
-//   } finally {
-//     await client.close();
-//   }
-// });
-
 app.get('/', (req, res) => {
   res.send('hello world');
 });
