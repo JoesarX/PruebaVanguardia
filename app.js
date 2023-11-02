@@ -1,13 +1,17 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const studentRouter=require("./Routes/StudentRoutes")
+const ingredienteRouter=require("./Routes/IngredienteRoutes")
+const pizzaRouter=require("./Routes/PizzaRoutes")
+const menuRouter=require("./Routes/MenuRoutes")
 var mongoose = require("mongoose");
 require("dotenv").config();
 
 app.use(express.json());
 
-app.use("/students",studentRouter);
+app.use("/ingredientes",ingredienteRouter);
+app.use("/pizzas",pizzaRouter);
+app.use("/menus",menuRouter);
 
 mongoose.connect(process.env.MOONGOSEKEY, {
   useNewUrlParser: true,
